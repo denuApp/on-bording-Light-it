@@ -1,0 +1,14 @@
+[
+    {
+        "First Name" : "Juan",
+        "Last Name" : "Fernandez",
+        "Email" : "juanchi_fer@gmail.com",
+        "Roles" : ["chef" , "padre" , "empresario"]
+    },
+    {
+        "First Name" : "Federica",
+        "Last Name" : "Blanco",
+        "Email" : "fefi_blan01@gmail.com",
+        "Roles" : ["Estudiante" , "Developer"]
+    }
+]
