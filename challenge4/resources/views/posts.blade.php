@@ -7,7 +7,6 @@
 
 <body>
     @foreach($posts as $post)
-    @ddd($loop)
         <article>
             <h1>
                 <a href = "/post/{{$post->slug}}">
