@@ -21,29 +21,12 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
 
-
-    // $posts = array_map(function($file){
-    //     $document = YamlFrontMatter::parseFile($file);
-
-    //     return new Post(
-    //         $document->title,
-    //         $document->excerpt,
-    //         $document->date,
-    //         $document->body,
-    //         $document->slug
-    //     );
-    // }, $files );
-
-
-
-    //return view('posts', ['posts' => $post] );
-
-
      return view('posts', [
-         'posts' => Post::latest()->get()
+         'posts' => Post::latest()->get(),
+         'categories' => Category::all()
      ]);
 
-});
+})->name('home');
 
 Route::get('post/{post:slug}', function (Post $post) { // Post::where('slug', $post)->firstOrFail
 
@@ -59,13 +42,16 @@ Route::get('post/{post:slug}', function (Post $post) { // Post::where('slug', $p
 Route::get('categories/{category:slug}' , function (Category $category)
 {
     return view ('posts', [
-        'posts'=> $category->posts->load
+        'posts'=> $category->posts,
+        'currentCategory' => $category,
+        'categories' => Category::all()
     ]);
-});
+})->name('category');
 
 Route::get('authors/{author:username}' , function (User $author)
 {
     return view ('posts', [
-        'posts'=> $author->posts->load
+        'posts'=> $author->posts,
+        'categories' => Category::all()
     ]);
 });
