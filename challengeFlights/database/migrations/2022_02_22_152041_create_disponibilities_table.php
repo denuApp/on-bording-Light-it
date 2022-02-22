@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('disponibilities', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('id_city');
+            $table->foreignId(('id_airline'));
             $table->timestamps();
         });
     }
