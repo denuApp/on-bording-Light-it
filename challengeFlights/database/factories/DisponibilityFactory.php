@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Airline;
+use App\Models\City;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class DisponibilityFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'id_city' => City::factory(),
+            'id_airline' => Airline::factory()
         ];
     }
 }

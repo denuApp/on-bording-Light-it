@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Flight extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function origin()
+    {
+        return $this->belongsTo(City::class, 'id_origin');
+    }
+
+    public function destination()
+    {
+        return $this->belongsTo(City::class, 'id_destination');
+    }
 }

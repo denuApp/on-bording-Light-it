@@ -14,7 +14,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        //
+        return view('admins.airlines', ['airlines' => Airline::all()]);
     }
 
     /**
