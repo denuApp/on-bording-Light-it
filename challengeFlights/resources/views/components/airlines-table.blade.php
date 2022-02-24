@@ -3,9 +3,14 @@
 
 
 <div class="flex flex-col mt-10">
+
+
     <div class="overflow-x-auto shadow-md sm:rounded-lg">
+
         <div class="inline-block min-w-full align-middle">
+
             <div class="overflow-hidden ">
+
                 <table class="min-w-full divide-y divide-gray-200 table-fixed ">
                     <thead class="bg-gray-100 ">
                     <tr>
@@ -28,9 +33,8 @@
 {{--                            </button>--}}
 
 
-
 {{--                            <a href="/create-airline" class="text-gray-500 text-4xl hover:text-green-600 " data-modal-toggle="/create-airline">+</a>--}}
-                            <x-popup />
+{{--                            <x-popup />--}}
                         </th>
 
                     </tr>

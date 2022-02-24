@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/challengeFlights/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/database/migrations/2022_01_22_151301_create_airlines_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/database/migrations/2022_01_22_151301_create_airlines_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/popup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/popup.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/challenge3/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -56,6 +65,7 @@
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/challengeFlights/resources/views/create-airline" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/components" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/admins" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views" />
@@ -70,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645544981439</updated>
       <workItem from="1645544983203" duration="49868000" />
+      <workItem from="1645727321163" duration="9611000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Airline;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class AirlineController extends Controller
 {
@@ -24,7 +25,7 @@ class AirlineController extends Controller
      */
     public function create()
     {
-        return view('admins.popup');
+
     }
 
     /**
@@ -35,7 +36,15 @@ class AirlineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required' , 'max:20', Rule::unique('airlines', 'name')],
+            'description' => ['required', 'max:225']
+        ]);
+
+        Airline::create($attributes);
+
+
+        return redirect('/airlines')->with('success', 'New airline added.');
     }
 
     /**
