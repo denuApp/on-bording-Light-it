@@ -19,6 +19,7 @@ use \App\Http\Controllers\CityController;
 Route::get('/',[AirlineController::class, 'index']);
 Route::get('airlines',[AirlineController::class, 'index']);
 Route::get('cities',[CityController::class, 'index']);
+Route::get('create-airline',[AirlineController::class, 'create']);
 
 //Route::get('/', function () {
 //    return view('layout');

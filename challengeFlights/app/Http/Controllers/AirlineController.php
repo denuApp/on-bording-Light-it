@@ -24,7 +24,7 @@ class AirlineController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins.popup');
     }
 
     /**
