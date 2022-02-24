@@ -1,3 +1,3 @@
 <x-layout>
-    <x-cities-table :cities="$cities"/>
+    <x-cities-table :cities="$cities" />
 </x-layout>

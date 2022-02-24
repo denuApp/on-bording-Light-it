@@ -33,8 +33,8 @@
 
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{$city->id}} </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{$city->name}} </td>
-                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> 2 </td>
-                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> 3 </td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{ $city->origin->count() }} </td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{ $city->destination->count() }} </td>
 
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                                 <a href="#" class="text-gray-500  hover:text-blue-600  hover:underline mx-auto mr-6">EDIT</a>

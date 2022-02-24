@@ -34,7 +34,7 @@
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{$airline->id}} </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{$airline->name}} </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4">  {{$airline->description}} </td>
-                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> 4 </td>
+                            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{ $airline->flights->count()  }} </td>
 
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                                 <a href="#" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</a>

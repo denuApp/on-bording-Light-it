@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Airline;
 use App\Models\City;
+use App\Models\Disponibility;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,12 +19,16 @@ class FlightFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'id_airline' => Airline::factory(),
-            'id_origin' => City::factory(),
-            'id_destination' => City::factory(),
-            'time_departure' => $this->faker->dateTime(),
-            'time_arrival' => $this->faker->dateTime(),
+        $timeArrival =  $this->faker->dateTime();
+        return[
+
+            'airline_id' => Airline::factory(),
+            'origin_id' => City::factory(),
+            'destination_id' => City::factory(),
+            'time_arrival' => $timeArrival,
+            'time_departure' =>  $this->faker->dateTime($timeArrival)
+
         ];
+
     }
 }

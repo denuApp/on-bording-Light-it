@@ -18,9 +18,12 @@ class DisponibilityFactory extends Factory
      */
     public function definition()
     {
+        //cuando lo cree a mano usar attach para que quede relacionado una sola vez una city con una aerolina
+
         return [
-            'id_city' => City::factory(),
-            'id_airline' => Airline::factory()
+
+            'id_city' => City::get()->random()->id,
+            'id_airline' => Airline::get()->random()->id
         ];
     }
 }

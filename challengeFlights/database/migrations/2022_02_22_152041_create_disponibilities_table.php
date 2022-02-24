@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+//use Illuminate\Validation\Rule;
 
 return new class extends Migration
 {
@@ -14,8 +15,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('disponibilities', function (Blueprint $table) {
-            $table->foreignId('id_city')->constrained('cities');
-            $table->foreignId('id_airline')->constrained('airlines');
+            //\Illuminate\Validation\;\
+
+            $table->foreignId('city_id')->constrained('cities');
+            $table->foreignId('airline_id')->constrained('airlines');
+
+
+            //$table->Rule::unique(['id_airline', 'id_city']);
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class City extends Model
 {
@@ -11,17 +12,21 @@ class City extends Model
 
     protected $guarded = [];
 
-    //protected $with = ['flight'];
 
-    public function origin ($query)
+    public function airlines()
     {
-        //
+        return $this->belongsToMany(Airline::class);
+    }
+
+    public function origin ()
+    {
+        return $this->hasMany(Flight::class, 'origin_id', 'id');
+    }
+
+    public function destination ()
+    {
+        return $this->hasMany(Flight::class, 'destination_id', 'id');
     }
 
 
-
-    public function flights ()
-    {
-        return $this->hasMany();
-    }
 }
