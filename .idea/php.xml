@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/challenge3/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/challenge3/vendor/composer" />
+    </include_path>
+  </component>
+</project>
