@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Airline;
 use App\Models\City;
-use App\Models\Flight;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class CityController extends Controller
 {
@@ -17,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return view('admins.cities', ['cities' => City::latest()->paginate(10)]);
+        //
     }
 
     /**
@@ -38,14 +35,7 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        $attributes = request()->validate([
-            'name' => ['required' , 'max:50', Rule::unique('cities', 'name')]
-        ]);
-
-        City::create($attributes);
-
-
-        return redirect('/cities')->with('success', 'New city added.');
+        //
     }
 
     /**
@@ -90,8 +80,6 @@ class CityController extends Controller
      */
     public function destroy(City $city)
     {
-        $city->delete();
-
-        return back()->with('success', 'City deleted.');
+        //
     }
 }
