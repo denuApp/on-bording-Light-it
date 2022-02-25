@@ -49,8 +49,21 @@
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{ $airline->flights->count()  }} </td>
 
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <a href="#" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</a>
-                                <a href="#" class="text-gray-500  hover:text-red-600 hover:underline mx-auto">DELETE</a>
+
+                                <div class="mt-8 md:mt-0 flex items-center">
+                                    <form method="POST" action="/update-airline" class=" ml-6">
+                                        @csrf
+                                        <button type="submit" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>
+                                    </form>
+                                    <form method="POST" action="/delete-airline" class=" ml-6">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button  class="text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>
+                                    </form>
+                                </div>
+
+
+{{--                                <a href="#" class="text-gray-500  hover:text-red-600 hover:underline mx-auto">DELETE</a>--}}
 {{--                                <img src="/images/trash.svg" class="w-5 h-5 mx-auto -mt-5  hover:underline"  />--}}
                             </td>
                         </tr>
