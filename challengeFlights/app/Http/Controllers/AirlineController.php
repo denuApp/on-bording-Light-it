@@ -89,11 +89,12 @@ class AirlineController extends Controller
      * @param  \App\Models\Airline  $airline
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Airline $airline)
+    public function destroy(int $airline)
     {
-        //$airline->delete();
+        $airline = Airline::find($airline);
+        $airline->delete();
 
-        DB::table('airlines')->where('id', $airline->id)->delete();
+//        DB::table('airlines')->where('id', $airline->id)->delete();
         return back()->with('success', 'Airline deleted.');
     }
 }

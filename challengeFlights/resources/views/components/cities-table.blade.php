@@ -3,6 +3,7 @@
 
 
 <div class="flex flex-col mt-10">
+    <p class="text-xs text-right text-gray-400 mb-3">* By deleting a city the asociated flights would be deleted</p>
     <div class="overflow-x-auto shadow-md sm:rounded-lg">
         <div class="inline-block min-w-full align-middle">
             <div class="overflow-hidden ">
@@ -38,11 +39,11 @@
 
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                                 <div class="mt-8 md:mt-0 flex items-center">
-                                    <form method="POST" action="/update-city" class=" ml-6">
+                                    <form method="POST" action="/update-city/{{$city->id}}" class=" ml-6">
                                         @csrf
                                         <button type="submit" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>
                                     </form>
-                                    <form method="POST" action="/delete-city" class=" ml-6">
+                                    <form method="POST" action="/delete-city/{{$city->id}}" class=" ml-6">
                                         @csrf
                                         @method('DELETE')
                                         <button  class="text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>

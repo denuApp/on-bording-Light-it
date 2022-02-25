@@ -17,8 +17,8 @@ return new class extends Migration
         Schema::create('disponibilities', function (Blueprint $table) {
             //\Illuminate\Validation\;\
 
-            $table->foreignId('city_id')->constrained('cities');
-            $table->foreignId('airline_id')->constrained('airlines');
+            $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
+            $table->foreignId('airline_id')->constrained('airlines')->onDelete('cascade');
 
 
             //$table->Rule::unique(['id_airline', 'id_city']);
