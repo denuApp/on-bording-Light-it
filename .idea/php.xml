@@ -13,8 +13,4 @@
       <path value="$PROJECT_DIR$/challenge3/vendor/composer" />
     </include_path>
   </component>
-  
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
-    <option name="suggestChangeDefaultLanguageLevel" value="false" />
-  </component>
 </project>
