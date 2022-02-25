@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Airline;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class AirlineController extends Controller
 {
@@ -14,7 +16,8 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        //
+
+       return view('admins.airlines', ['airlines' => Airline::latest()->paginate(10) ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class AirlineController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +38,15 @@ class AirlineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required' , 'max:50', Rule::unique('airlines', 'name')],
+            'description' => ['required', 'max:225']
+        ]);
+
+        Airline::create($attributes);
+
+
+        return redirect('/airlines')->with('success', 'New airline added.');
     }
 
     /**
@@ -78,8 +89,12 @@ class AirlineController extends Controller
      * @param  \App\Models\Airline  $airline
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Airline $airline)
+    public function destroy(int $airline)
     {
-        //
+        $airline = Airline::find($airline);
+        $airline->delete();
+
+//        DB::table('airlines')->where('id', $airline->id)->delete();
+        return back()->with('success', 'Airline deleted.');
     }
 }
