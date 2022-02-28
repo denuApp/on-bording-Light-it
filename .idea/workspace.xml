@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-airline.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -17,13 +17,17 @@ use \App\Http\Controllers\CityController;
     */
 
 Route::get('/',[AirlineController::class, 'index']);
+
 Route::get('airlines',[AirlineController::class, 'index']);
 Route::post('create-airline',[AirlineController::class, 'store']);
 Route::delete('delete-airline/{airline}',[AirlineController::class, 'destroy']);
+Route::patch('edit-airline/{airline}',[AirlineController::class, 'update']);
+
 
 Route::get('cities',[CityController::class, 'index']);
 Route::post('create-city',[CityController::class, 'store']);
 Route::delete('delete-city/{city}',[CityController::class, 'destroy']);
+Route::patch('edit-city/{city}',[CityController::class, 'update']);
 //Route::get('create-airline',[AirlineController::class, 'create']);
 
 //Route::get('/', function () {

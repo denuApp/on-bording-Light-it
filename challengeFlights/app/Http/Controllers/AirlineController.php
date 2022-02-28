@@ -80,7 +80,15 @@ class AirlineController extends Controller
      */
     public function update(Request $request, Airline $airline)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required' , 'max:50', Rule::unique('airlines', 'name')],
+            'description' => ['required', 'max:225']
+        ]);
+
+        $airline->update($attributes);
+
+
+        return back('')->with('success', 'Airline updated!');
     }
 
     /**

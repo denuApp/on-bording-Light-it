@@ -79,7 +79,14 @@ class CityController extends Controller
      */
     public function update(Request $request, City $city)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required' , 'max:50', Rule::unique('cities', 'name')]
+        ]);
+
+        $city->update($attributes);
+
+
+        return redirect('/cities')->with('success', 'New city added.');
     }
 
     /**
