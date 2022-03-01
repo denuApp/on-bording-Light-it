@@ -51,22 +51,14 @@
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
 
                                 <div class="mt-8 md:mt-0 flex items-center">
-<<<<<<< HEAD
-                                    <div x-data="{show: false}">
-                                        <form method="POST" action="/update-airline/{{$airline->id}}" class=" ml-6">
-                                            @csrf
-                                            <button type="submit" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>
-                                        </form>
 
 
-=======
 
                                     <div x-data="{ show: false }" @click.away="show = false" >
 
                                             <button @click="show = true" type="submit" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>
 
                                             <x-edit-airline :airline="$airline"/>
->>>>>>> 90e8fee8fa9b9f0812669cd758c9d21d40124765
                                     </div>
 
 
