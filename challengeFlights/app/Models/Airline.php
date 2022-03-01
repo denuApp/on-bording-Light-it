@@ -9,14 +9,14 @@ class Airline extends Model
 {
     use HasFactory;
 
-    protected $guarded=[];
+    protected $guarded = [];
 
-    public function flights ()
+    public function flights()
     {
         return $this->hasMany(Flight::class);
     }
 
-    public function cities ()
+    public function cities()
     {
         return $this->hasMany(City::class);
     }

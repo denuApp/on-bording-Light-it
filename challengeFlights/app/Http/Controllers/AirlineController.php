@@ -16,8 +16,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-
-       return view('admins.airlines', ['airlines' => Airline::latest()->paginate(10) ]);
+        return view('admins.airlines', ['airlines' => Airline::latest()->paginate(10)]);
     }
 
     /**
@@ -27,7 +26,6 @@ class AirlineController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -39,12 +37,11 @@ class AirlineController extends Controller
     public function store(Request $request)
     {
         $attributes = request()->validate([
-            'name' => ['required' , 'max:50', Rule::unique('airlines', 'name')],
-            'description' => ['required', 'max:225']
+            'name' => ['required', 'max:50', Rule::unique('airlines', 'name')],
+            'description' => ['required', 'max:225'],
         ]);
 
         Airline::create($attributes);
-
 
         return redirect('/airlines')->with('success', 'New airline added.');
     }
@@ -80,7 +77,14 @@ class AirlineController extends Controller
      */
     public function update(Request $request, Airline $airline)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required', 'max:50', Rule::unique('airlines', 'name')],
+            'description' => ['required', 'max:225'],
+        ]);
+
+        $airline->update($attributes);
+
+        return back('')->with('success', 'Airline updated!');
     }
 
     /**

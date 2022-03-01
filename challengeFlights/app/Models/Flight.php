@@ -25,7 +25,7 @@ class Flight extends Model
 //            ->where('id_destination', $search);
 //    }
 
-    public function airline ()
+    public function airline()
     {
         return $this->belongsTo(Airline::class);
     }
