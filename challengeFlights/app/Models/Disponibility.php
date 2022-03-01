@@ -11,12 +11,12 @@ class Disponibility extends Model
 
     protected $guarded = [];
 
-    public function city ()
+    public function city()
     {
         return $this->hasMany(City::class, 'city_id');
     }
 
-    public function airline ()
+    public function airline()
     {
         return $this->belongsToMany(Airline::class, 'airline_id');
     }
