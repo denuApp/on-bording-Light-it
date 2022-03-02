@@ -50,25 +50,24 @@ class CityController extends Controller
 //                'errors' => $attributes->messages()
 //            ]);
 //        }else{
-            City::create($attributes);
-            return response()->json([
+        City::create($attributes);
+
+        return response()->json([
                 'status' => 200,
-                'message' => 'New city added successfully!'
+                'message' => 'New city added successfully!',
             ]);
 //        }
-
     }
 
     public function fetch()
     {
-        $cities = City::withCount(['origin','destination'])->get();
+        $cities = City::withCount(['origin', 'destination'])->get();
         //$cities = City::all()->loadCount(['origin','destination']);
 
         return response()->json([
-            'cities' => $cities
+            'cities' => $cities,
         ]);
     }
-
 
     /**
      * Display the specified resource.
@@ -78,7 +77,6 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-
     }
 
     /**
