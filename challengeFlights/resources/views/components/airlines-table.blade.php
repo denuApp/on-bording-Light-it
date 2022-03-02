@@ -27,6 +27,9 @@
                             Amount of flights
                         </th>
                         <th scope="col" class="p-4">
+                            <span class="sr-only">Edit</span>
+                        </th>
+                        <th scope="col" class="p-4">
 
                             <div x-data="{ show: false }" @click.away="show = false" class="ml-14 text-right" >
 
@@ -48,11 +51,21 @@
                             <td class="py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4">  {{$airline->description}} </td>
                             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{ $airline->flights->count()  }} </td>
 
+{{--                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">--}}
+
+{{--                                <div class="mt-8 md:mt-0 flex items-center">--}}
+{{--                                    <div x-data="{show: false}">--}}
+{{--                                        <form method="POST" action="/update-airline/{{$airline->id}}" class=" ml-6">--}}
+{{--                                            @csrf--}}
+{{--                                            <button type="submit" class="text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>--}}
+{{--                                        </form>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </td>--}}
+
                             <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
 
                                 <div class="mt-8 md:mt-0 flex items-center">
-
-
 
                                     <div x-data="{ show: false }" @click.away="show = false" >
 
@@ -60,7 +73,11 @@
 
                                             <x-edit-airline :airline="$airline"/>
                                     </div>
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
 
+                                <div class="mt-8 md:mt-0 flex items-center">
 
                                     <form method="POST" action="/delete-airline/{{$airline->id}}" class=" ml-6">
                                         @csrf
@@ -69,9 +86,6 @@
                                     </form>
                                 </div>
 
-
-{{--                                <a href="#" class="text-gray-500  hover:text-red-600 hover:underline mx-auto">DELETE</a>--}}
-{{--                                <img src="/images/trash.svg" class="w-5 h-5 mx-auto -mt-5  hover:underline"  />--}}
                             </td>
                         </tr>
                     @endforeach

@@ -1,7 +1,7 @@
 @props(['city'])
 
 <div x-show="show">
-    <div  aria-hidden="true" class=" overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
+    <div  aria-hidden="true" id="editCity" class="hidden overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
         <div class="relative px-4 w-full max-w-md h-full md:h-auto">
             <!-- Modal content -->
             <div class="relative bg-gray-300 rounded-lg shadow ">
@@ -27,7 +27,7 @@
                     @enderror
 
                     <button type="submit"
-                            class="transition-colors duration-300 bg-purple-500 hover:bg-blue-600 mt-4 lg:mt-0 right-aligned rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
+                            class="edit_city transition-colors duration-300 bg-purple-500 hover:bg-blue-600 mt-4 lg:mt-0 right-aligned rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
                     >
                         Make changes
                     </button>

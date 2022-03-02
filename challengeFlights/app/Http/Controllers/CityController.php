@@ -39,11 +39,36 @@ class CityController extends Controller
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('cities', 'name')],
         ]);
+//
+//        City::create($attributes);
+//        return redirect('/cities')->with('success', 'New city added.');
 
-        City::create($attributes);
+//        if($attributes->fails())
+//        {
+//            return response()->json([
+//                'status' => 400,
+//                'errors' => $attributes->messages()
+//            ]);
+//        }else{
+            City::create($attributes);
+            return response()->json([
+                'status' => 200,
+                'message' => 'New city added successfully!'
+            ]);
+//        }
 
-        return redirect('/cities')->with('success', 'New city added.');
     }
+
+    public function fetch()
+    {
+        $cities = City::withCount(['origin','destination'])->get();
+        //$cities = City::all()->loadCount(['origin','destination']);
+
+        return response()->json([
+            'cities' => $cities
+        ]);
+    }
+
 
     /**
      * Display the specified resource.
@@ -53,7 +78,7 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-        //
+
     }
 
     /**
