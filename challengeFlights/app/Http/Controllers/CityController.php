@@ -45,7 +45,6 @@ class CityController extends Controller
                 'status' => 200,
                 'message' => 'New city added successfully!',
             ]);
-
     }
 
     public function fetch()
@@ -76,11 +75,10 @@ class CityController extends Controller
      */
     public function edit(City $city)
     {
-            return response()->json([
+        return response()->json([
                 'status'=>200,
-                'city'=>$city
+                'city'=>$city,
             ]);
-
     }
 
     /**
@@ -90,7 +88,7 @@ class CityController extends Controller
      * @param  \App\Models\City  $city
      * @return \Illuminate\Http\Response
      */
-    public function update( City $city)
+    public function update(City $city)
     {
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('cities', 'name')],
@@ -102,9 +100,6 @@ class CityController extends Controller
             'status' => 200,
             'message' => 'City updated successfully!',
         ]);
-
-
-
     }
 
     /**
