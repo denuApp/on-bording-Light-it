@@ -1,5 +1,5 @@
 
-@props(['cities'])
+
 
 
 <div class="flex flex-col mt-10">
@@ -38,7 +38,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200  ">
-                    @foreach($cities as $city)
+{{--                    @foreach($cities as $city)--}}
 {{--                        '<tr class="hover:bg-gray-100">--}}
 
 {{--                                <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> {{$city->id}} </td>--}}
@@ -66,7 +66,11 @@
 {{--                                    </div>--}}
 {{--                                </td>--}}
 {{--                            </tr>--}}
-                    @endforeach
+{{--<x-edit-city :city="$city"/>--}}
+{{--                    @endforeach--}}
+{{--                    <div  x-data="{ show: false }" @click.away="show = false"> <x-edit-city /></div>--}}
+                        <x-edit-city />
+
                     </tbody>
                 </table>
             </div>
