@@ -112,6 +112,9 @@ class CityController extends Controller
     {
         $city->delete();
 
-        return back()->with('success', 'City deleted.');
+        return response()->json([
+            'status' => 200,
+            'message' => 'City deleted successfully!',
+        ]);
     }
 }

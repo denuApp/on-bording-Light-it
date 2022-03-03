@@ -9,9 +9,9 @@
       <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-jquery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-jquery.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <updated>1645544981439</updated>
       <workItem from="1645544983203" duration="49868000" />
       <workItem from="1645727321163" duration="16774000" />
-      <workItem from="1646154460221" duration="39487000" />
+      <workItem from="1646154460221" duration="42656000" />
     </task>
     <servers />
   </component>

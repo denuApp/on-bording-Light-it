@@ -31,11 +31,11 @@
                                 </td>\
                                 <td class="py-4 px-0 text-sm font-medium text-right whitespace-nowrap">\
                                     <div class="mt-8 md:mt-0 flex items-center">\
-                                        <form method="POST" action="/delete-city/'+ item.id +'" class=" ml-6">\
+                                        <div class=" ml-6">\
                                             @csrf\
-                                            @method('DELETE')\
-                                            <button value="'+ item.id +'" class="text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>\
-                                        </form>\
+                                            \
+                                            <button value="'+ item.id +'" class=" delete_button text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>\
+                                        </div>\
                                     </div>\
                                 </td>\
                             </tr>'
@@ -56,8 +56,9 @@
         $(document).on('click', '.add_city', function (e) {
             e.preventDefault();
             $data = {
-                name : $('#name').val()
+                name : $('#name_create').val()
             }
+            console.log($data.name);
 
             $.ajaxSetup({
                 headers: {
@@ -89,7 +90,14 @@
 
         });
 
-        $(document).on('click','.close_button', function(e){
+        $(document).on('click','.close_button_add', function(e){
+            e.preventDefault();
+            $("#createCity").find('input').val("");
+            $('#saveform_errList').html("");
+            $("#createCity").addClass('hidden');
+        })
+
+        $(document).on('click','.close_button_edit', function(e){
             e.preventDefault();
             $("#editCity").find('input').val("");
             $('#updateform_errList').html("");
@@ -148,6 +156,28 @@
             })
 
         })
+
+        $(document).on('click','.delete_button', function(e){
+            e.preventDefault();
+            $city_id = $(this).val();
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                type: "DELETE",
+                url: "/delete-city/"+$city_id,
+                success: function (response) {
+                    alert(response.message);
+                    fetchCity();
+                },
+            })
+
+        })
+
 
     });
 </script>

@@ -26,9 +26,9 @@
                             <span class="sr-only">Edit</span>
                         </th>
                         <th scope="col" class="p-4">
-                            <div x-data="{ show: false }" @click.away="show = false" class="ml-14 text-right" >
+                            <div  class="ml-14 text-right" >
 
-                                <button @click="show = true" type="submit" class="add_button text-gray-500  hover:text-green-600 text-3xl mx-auto mr-6">+</button>
+                                <button  type="submit" class="add_button text-gray-500  hover:text-green-600 text-3xl mx-auto mr-6">+</button>
 
                                 <x-create-city />
 
