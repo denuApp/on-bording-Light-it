@@ -1,5 +1,5 @@
 
-    <div  aria-hidden="true" class=" overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
+    <div  aria-hidden="true" id="createAirline" class="hidden overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
         <div class="relative px-4 w-full max-w-md h-full md:h-auto">
             <!-- Modal content -->
             <div class="relative bg-gray-300 rounded-lg shadow ">
@@ -14,31 +14,32 @@
                     <div class="  mb-6 bg-gray-200 rounded-full">
                         <div class="lg:py-3 lg:px-5 flex items-center">
 
-                            <input id="name" type="text" name="name" required placeholder="Your airline name"
+                            <input id="name_create" type="text" name="name" required placeholder="Your airline name"
                                    class="lg:bg-transparent py-2 lg:py-0 pl-4 focus-within:outline-none">
                         </div>
 
                     </div>
-                    @error('name')
-                    <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>
-                    @enderror
+{{--                    @error('name')--}}
+{{--                    <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>--}}
+{{--                    @enderror--}}
 
                     <div class=" mb-6  bg-gray-200 rounded-3xl  ">
                         <div class="lg:py-3 lg:px-5 flex row-span-3 ">
 
 
-                            <input id="description" type="text" value="{{ old('description')}}" name="description" required placeholder="Description"
+                            <input id="description_create" type="text" value="{{ old('description')}}" name="description" required placeholder="Description"
                                    class="lg:bg-transparent py-2 lg:py-0 pl-4 focus-within:outline-none">
                         </div>
 
                     </div>
 
-                    @error('description')
-                    <p class="text-red-500 text-xs -mt-1 mb-6 mr-3">{{ $message }}</p>
-                    @enderror
+{{--                    @error('description')--}}
+{{--                    <p class="text-red-500 text-xs -mt-1 mb-6 mr-3">{{ $message }}</p>--}}
+{{--                    @enderror--}}
+
 
                     <button type="submit"
-                            class="transition-colors duration-300 bg-purple-500 hover:bg-blue-600 mt-4 lg:mt-0 right-aligned rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
+                            class="add_airline transition-colors duration-300 bg-purple-500 hover:bg-blue-600 mt-4 lg:mt-0 right-aligned rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
                     >
                         Add
                     </button>

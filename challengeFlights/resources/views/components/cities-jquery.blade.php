@@ -22,17 +22,14 @@
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap "> '+item.destination_count+' </td>\
                                 <td class="py-4 px-0 text-sm font-medium text-right whitespace-nowrap">\
                                     <div   class="mt-8 md:mt-0 flex items-center">\
-                                       \
-                                            <button   type="submit" value="'+ item.id +'" class="edit_button text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>\
-                                            \
-                                            \
-                                         \
+                                        \
+                                        <button   type="submit" value="'+ item.id +'" class="edit_button text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>\
+                                        \
                                     </div>\
                                 </td>\
                                 <td class="py-4 px-0 text-sm font-medium text-right whitespace-nowrap">\
                                     <div class="mt-8 md:mt-0 flex items-center">\
                                         <div class=" ml-6">\
-                                            @csrf\
                                             \
                                             <button value="'+ item.id +'" class=" delete_button text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>\
                                         </div>\
@@ -49,7 +46,6 @@
 
         $(document).on('click', '.add_button', function (e) {
             e.preventDefault();
-            console.log('abe')
             $("#createCity").removeClass('hidden');
         })
 
@@ -58,7 +54,7 @@
             $data = {
                 name : $('#name_create').val()
             }
-            console.log($data.name);
+
 
             $.ajaxSetup({
                 headers: {
@@ -107,7 +103,6 @@
         $(document).on('click','.edit_button', function(e){
             e.preventDefault();
             $city_id = $(this).val();
-            console.log($city_id);
             $("#editCity").removeClass('hidden');
             $.ajax({
                 type: "GET",
@@ -133,7 +128,6 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            console.log( $data.id);
 
             $.ajax({
                 type: "PATCH",
