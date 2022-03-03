@@ -39,10 +39,22 @@ class CityController extends Controller
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('cities', 'name')],
         ]);
-
         City::create($attributes);
 
-        return redirect('/cities')->with('success', 'New city added.');
+        return response()->json([
+                'status' => 200,
+                'message' => 'New city added successfully!',
+            ]);
+    }
+
+    public function fetch()
+    {
+        $cities = City::withCount(['origin', 'destination'])->get();
+        //$cities = City::all()->loadCount(['origin','destination']);
+
+        return response()->json([
+            'cities' => $cities,
+        ]);
     }
 
     /**
@@ -53,7 +65,6 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-        //
     }
 
     /**
@@ -64,7 +75,10 @@ class CityController extends Controller
      */
     public function edit(City $city)
     {
-        //
+        return response()->json([
+                'status'=>200,
+                'city'=>$city,
+            ]);
     }
 
     /**
@@ -74,7 +88,7 @@ class CityController extends Controller
      * @param  \App\Models\City  $city
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, City $city)
+    public function update(City $city)
     {
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('cities', 'name')],
@@ -82,7 +96,10 @@ class CityController extends Controller
 
         $city->update($attributes);
 
-        return redirect('/cities')->with('success', 'New city added.');
+        return response()->json([
+            'status' => 200,
+            'message' => 'City updated successfully!',
+        ]);
     }
 
     /**
@@ -95,6 +112,9 @@ class CityController extends Controller
     {
         $city->delete();
 
-        return back()->with('success', 'City deleted.');
+        return response()->json([
+            'status' => 200,
+            'message' => 'City deleted successfully!',
+        ]);
     }
 }
