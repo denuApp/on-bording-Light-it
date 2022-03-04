@@ -59,26 +59,33 @@
                 })
             })
                 .then(res => res.json())
-                .then(function (response) {
-                    console.log(response.message);
-                    $("#createAirline").addClass('hidden');
-                    $("#createAirline").find('input').val("");
-                    fetchAirline();
+                .then(  function (response) {
+                    if(response.status == 200){
+                        alert(response.message);
+                        $("#createAirline").addClass('hidden');
+                        $("#createAirline").find('input').val("");
+                        fetchAirline();
+                    }
+                    else{
+                        $('#saveform_errList').html(response.message);
+                    }
+
                 })
+
         })
 
 
         $(document).on('click', '.close_button_add', function (e) {
             e.preventDefault();
             $("#createAirline").find('input').val("");
-            // $('#saveform_errList').html("");
+            $('#saveform_errList').html("");
             $("#createAirline").addClass('hidden');
         })
 
         $(document).on('click', '.close_button_edit', function (e) {
             e.preventDefault();
             $("#editAirline").find('input').val("");
-            // $('#updateform_errList').html("");
+            $('#updateform_errList').html("");
             $("#editAirline").addClass('hidden');
         })
 
@@ -102,8 +109,7 @@
         $(document).on('click', '.update_airline', function (e) {
 
             e.preventDefault();
-            //$airline_id = $('#idEdit').val();
-            console.log($airline_id)
+
             fetch('http://127.0.0.1:8000/update-airline/' + $airline_id, {
                 method: 'PATCH',
                 headers: {
@@ -119,12 +125,16 @@
             })
                 .then(res => res.json())
                 .then(function (response) {
+                    if(response.status == 200){
+                        alert(response.message);
+                        $("#editAirline").addClass('hidden');
+                        $('#updateform_errList').html("");
+                        $("#editAirline").find('input').val("");
+                        fetchAirline();
+                    }else{
+                        $('#updateform_errList').html(response.message);
+                    }
 
-                    alert(response.message);
-                    $("#editAirline").addClass('hidden');
-                    // $('#updateform_errList').html("");
-                    $("#editAirline").find('input').val("");
-                    fetchAirline();
                 })
 
         })
@@ -143,7 +153,6 @@
             })
                 .then(res => res.json())
                 .then(function (response) {
-
                     alert(response.message);
                     fetchAirline();
                 })
@@ -152,26 +161,3 @@
     });
 
 </script>
-
-{{--'<tr class="hover:bg-gray-100">\--}}
-{{--    <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">${airline.id}</td>\--}}
-{{--    <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">${airline.name}</td>\--}}
-{{--    <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">${airline.description}</td>\--}}
-{{--    <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">${airline.flights_count}</td>\--}}
-{{--    <td class="py-4 px-0 text-sm font-medium text-right whitespace-nowrap">\--}}
-{{--        <div   class="mt-8 md:mt-0 flex items-center">\--}}
-{{--            \--}}
-{{--            <button   type="submit" value="${airline.id}" class="edit_button text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6">EDIT</button>\--}}
-{{--            \--}}
-{{--        </div>\--}}
-{{--    </td>\--}}
-{{--    <td class="py-4 px-0 text-sm font-medium text-right whitespace-nowrap">\--}}
-{{--        <div class="mt-8 md:mt-0 flex items-center">\--}}
-{{--            <div class=" ml-6">\--}}
-{{--                @csrf\--}}
-{{--                \--}}
-{{--                <button value="${airline.id}" class=" delete_button text-gray-500 hover:text-red-600 hover:underline mx-auto">DELETE</button>\--}}
-{{--            </div>\--}}
-{{--        </div>\--}}
-{{--    </td>\--}}
-{{--</tr>';--}}

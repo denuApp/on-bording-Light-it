@@ -88,6 +88,7 @@
 
 {{--                            </td>--}}
 {{--                        </tr>--}}
+
                             <x-edit-airline />
 {{--                    @endforeach--}}
 

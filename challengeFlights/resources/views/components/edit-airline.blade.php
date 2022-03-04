@@ -51,7 +51,7 @@
 {{--    </div>--}}
 
 
-<div  aria-hidden="true" id="editAirline" class="hidden edit_modal overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
+<div  aria-hidden="true" id="editAirline" class="hidden edit_modal overflow-y-auto flex overflow-x-hidden fixed justify-center items-center text-right h-modal md:h-full md:inset-0">
     <div class="relative px-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-gray-300 rounded-lg shadow ">
@@ -71,9 +71,9 @@
                     </div>
 
                 </div>
-                @error('name')
-                <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>
-                @enderror
+{{--                @error('name')--}}
+{{--                <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>--}}
+{{--                @enderror--}}
 
                 <div class=" mb-6  bg-gray-200 rounded-3xl  ">
                     <div class="lg:py-3 lg:px-5 flex row-span-3 ">
@@ -85,11 +85,11 @@
 
                 </div>
 
-                @error('description')
-                <p class="text-red-500 text-xs -mt-1 mb-6 mr-3">{{ $message }}</p>
-                @enderror
+{{--                @error('description')--}}
+{{--                <p class="text-red-500 text-xs -mt-1 mb-6 mr-3">{{ $message }}</p>--}}
+{{--                @enderror--}}
                 <p id="idEdit" class="hidden"></p>
-                <ul id="updateform_errList" > </ul>
+                <ul id="updateform_errList" class="text-red-500 text-xs -mt-1 mb-6 mr-3" > </ul>
 
                 <button type="submit"
 
