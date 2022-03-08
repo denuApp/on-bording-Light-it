@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Airline;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class AirlineController extends Controller
@@ -26,6 +24,7 @@ class AirlineController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -34,7 +33,7 @@ class AirlineController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('airlines', 'name')],
@@ -43,7 +42,19 @@ class AirlineController extends Controller
 
         Airline::create($attributes);
 
-        return redirect('/airlines')->with('success', 'New airline added.');
+        return response()->json([
+            'status' => 200,
+            'message' => 'New airline added successfully!',
+        ]);
+    }
+
+    public function fetch()
+    {
+        $airlines = Airline::withCount(['flights'])->get();
+
+        return response()->json([
+            'airlines' => $airlines,
+        ]);
     }
 
     /**
@@ -65,7 +76,10 @@ class AirlineController extends Controller
      */
     public function edit(Airline $airline)
     {
-        //
+        return response()->json([
+            'status'=>200,
+            'airline'=>$airline,
+        ]);
     }
 
     /**
@@ -75,7 +89,7 @@ class AirlineController extends Controller
      * @param  \App\Models\Airline  $airline
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Airline $airline)
+    public function update(Airline $airline)
     {
         $attributes = request()->validate([
             'name' => ['required', 'max:50', Rule::unique('airlines', 'name')],
@@ -84,7 +98,10 @@ class AirlineController extends Controller
 
         $airline->update($attributes);
 
-        return back('')->with('success', 'Airline updated!');
+        return response()->json([
+            'status' => 200,
+            'message' => 'Airline updated successfully!',
+        ]);
     }
 
     /**
@@ -93,12 +110,13 @@ class AirlineController extends Controller
      * @param  \App\Models\Airline  $airline
      * @return \Illuminate\Http\Response
      */
-    public function destroy(int $airline)
+    public function destroy(Airline $airline)
     {
-        $airline = Airline::find($airline);
         $airline->delete();
 
-//        DB::table('airlines')->where('id', $airline->id)->delete();
-        return back()->with('success', 'Airline deleted.');
+        return response()->json([
+            'status' => 200,
+            'message' => 'Airline deleted successfully!',
+        ]);
     }
 }
