@@ -4,7 +4,7 @@
         fetchAirline();
 
         function fetchAirline() {
-            fetch('http://127.0.0.1:8000/fetch-airline')
+            fetch('http://challengeflights.test/fetch-airline')
                 .then(res => res.json())
                 .then(function (data) {
                     $('tbody').html("");
@@ -46,7 +46,7 @@
 
         $(document).on('click', '.add_airline', function (e) {
             e.preventDefault();
-            fetch('http://127.0.0.1:8000/create-airline', {
+            fetch('http://challengeflights.test/create-airline', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +95,7 @@
             $airline_id = $(this).val();
             $("#editAirline").removeClass('hidden');
 
-            fetch('http://127.0.0.1:8000/edit-airline/' + $airline_id)
+            fetch('http://challengeflights.test/edit-airline/' + $airline_id)
                 .then(res => res.json())
                 .then(function (response) {
                     $("#name").val(response.airline.name);
@@ -110,7 +110,7 @@
 
             e.preventDefault();
 
-            fetch('http://127.0.0.1:8000/update-airline/' + $airline_id, {
+            fetch('http://challengeflights.test/update-airline/' + $airline_id, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -143,7 +143,7 @@
 
             e.preventDefault();
             $airline_id = $(this).val();
-            fetch('http://127.0.0.1:8000/delete-airline/' + $airline_id, {
+            fetch('http://challengeflights.test/delete-airline/' + $airline_id, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
