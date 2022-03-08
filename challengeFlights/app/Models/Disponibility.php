@@ -13,7 +13,7 @@ class Disponibility extends Model
 
     public function city()
     {
-        return $this->hasMany(City::class, 'id','city_id');
+        return $this->hasMany(City::class, 'id', 'city_id');
     }
 
     public function airline()
