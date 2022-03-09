@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/flights-table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icon&#10;" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/Disponibility.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/Disponibility.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +42,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,10 +93,11 @@
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/challengeFlights/resources/views" />
+      <recent name="$PROJECT_DIR$/challengeFlights/resources/js/components" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/create-airline" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/components" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/admins" />
-      <recent name="$PROJECT_DIR$/challengeFlights/resources/views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,7 +111,8 @@
       <workItem from="1645544983203" duration="49868000" />
       <workItem from="1645727321163" duration="16774000" />
       <workItem from="1646154460221" duration="64151000" />
-      <workItem from="1646761971783" duration="2674000" />
+      <workItem from="1646761971783" duration="9740000" />
+      <workItem from="1646846344586" duration="3891000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ class FlightController extends Controller
      */
     public function index()
     {
-        //
+        return view('admins.flights', ['flights' => Flight::latest()->paginate(10)]);
     }
 
     /**

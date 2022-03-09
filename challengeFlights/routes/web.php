@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AirlineController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\FlightController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
     |
     */
 
-Route::get('/', [AirlineController::class, 'index']);
+//Route::get('/', [AirlineController::class, 'index']);
 
 Route::get('airlines', [AirlineController::class, 'index']);
 Route::post('create-airline', [AirlineController::class, 'store']);
@@ -32,6 +33,8 @@ Route::patch('update-city/{city}', [CityController::class, 'update']);
 Route::get('fetch-city', [CityController::class, 'fetch']);
 //Route::get('create-airline',[AirlineController::class, 'create']);
 
-//Route::get('/', function () {
-//    return view('layout');
-//});
+Route::get('flights', [FlightController::class, 'index']);
+
+Route::get('/', function () {
+    return view('home');
+});
