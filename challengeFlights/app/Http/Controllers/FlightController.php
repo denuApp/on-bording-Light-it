@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Flight;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class FlightController extends Controller
 {
@@ -22,7 +21,7 @@ class FlightController extends Controller
 
     public function fetch()
     {
-        $flights = Flight::with(['airline','origin','destination'])->get();
+        $flights = Flight::with(['airline', 'origin', 'destination'])->get();
 
         return response()->json([
             'flights' => $flights,
@@ -31,11 +30,8 @@ class FlightController extends Controller
 
     public function flightsData()
     {
-
-
         return Flight::all()->toArray();
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -55,24 +51,20 @@ class FlightController extends Controller
      */
     public function store(Request $request)
     {
-
-            $attributes = request()->validate([
-                'airline_id' => ['required', ],
-                'origin_id' => ['required', ],
+        $attributes = request()->validate([
+                'airline_id' => ['required'],
+                'origin_id' => ['required'],
                 'destination_id' => ['required'],
                 'time_departure' => ['required'],
                 'time_arrival' =>  ['required'],
             ]);
 
+        Flight::create($attributes);
 
-                Flight::create($attributes);
-
-                return response()->json([
+        return response()->json([
                     'status' => 200,
                     'message' => 'arrival date prior to departure date',
                 ]);
-
-
     }
 
     /**
@@ -96,7 +88,7 @@ class FlightController extends Controller
     {
         return response()->json([
             'status'=>200,
-            'flight'=>$flight::with(['airline','origin','destination']),
+            'flight'=>$flight::with(['airline', 'origin', 'destination']),
         ]);
     }
 
@@ -127,5 +119,4 @@ class FlightController extends Controller
             'message' => 'Flight deleted successfully!',
         ]);
     }
-
 }

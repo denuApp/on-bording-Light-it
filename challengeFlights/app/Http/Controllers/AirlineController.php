@@ -57,9 +57,6 @@ class AirlineController extends Controller
         ]);
     }
 
-
-
-
     /**
      * Display the specified resource.
      *

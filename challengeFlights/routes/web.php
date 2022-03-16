@@ -39,9 +39,6 @@ Route::delete('delete-flight/{flight}', [FlightController::class, 'destroy']);
 Route::post('create-flight', [FlightController::class, 'store']);
 Route::get('edit-flight/{flight}', [CityController::class, 'edit']);
 
-
 Route::get('/', function () {
     return view('home');
 });
-
-
