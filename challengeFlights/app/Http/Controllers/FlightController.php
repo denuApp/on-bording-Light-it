@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Flight;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class FlightController extends Controller
 {
@@ -15,7 +16,26 @@ class FlightController extends Controller
     public function index()
     {
         return view('admins.flights', ['flights' => Flight::latest()->paginate(10)]);
+
+//        return Flight::all();
     }
+
+    public function fetch()
+    {
+        $flights = Flight::with(['airline','origin','destination'])->get();
+
+        return response()->json([
+            'flights' => $flights,
+        ]);
+    }
+
+    public function flightsData()
+    {
+
+
+        return Flight::all()->toArray();
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +55,24 @@ class FlightController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+            $attributes = request()->validate([
+                'airline_id' => ['required', ],
+                'origin_id' => ['required', ],
+                'destination_id' => ['required'],
+                'time_departure' => ['required'],
+                'time_arrival' =>  ['required'],
+            ]);
+
+
+                Flight::create($attributes);
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'arrival date prior to departure date',
+                ]);
+
+
     }
 
     /**
@@ -57,7 +94,10 @@ class FlightController extends Controller
      */
     public function edit(Flight $flight)
     {
-        //
+        return response()->json([
+            'status'=>200,
+            'flight'=>$flight::with(['airline','origin','destination']),
+        ]);
     }
 
     /**
@@ -80,6 +120,12 @@ class FlightController extends Controller
      */
     public function destroy(Flight $flight)
     {
-        //
+        $flight->delete();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Flight deleted successfully!',
+        ]);
     }
+
 }

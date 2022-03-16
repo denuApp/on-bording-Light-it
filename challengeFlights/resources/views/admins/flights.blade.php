@@ -1,17 +1,15 @@
+
+
 <x-layout>
-{{--    <flights-component></flights-component>--}}
 
+    <div id="app">
+        <flights-table></flights-table>
 
-    <div id='app' >
-        <flight-component> </flight-component>
     </div>
 
-    @if($flights->count())
-        <x-flights-table :flights="$flights" />
-        {{ $flights->links() }}
-    @endif
-    <script src="http://cdnjs.cloudfare"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{{--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>--}}
     <script src="js/app.js" > </script>
+
 </x-layout>
 

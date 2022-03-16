@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/flights-table.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightData.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/popupWarning.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/Airline.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/Airline.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/database/factories/DisponibilityFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/database/factories/DisponibilityFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/flights-table.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -112,7 +116,15 @@
       <workItem from="1645727321163" duration="16774000" />
       <workItem from="1646154460221" duration="64151000" />
       <workItem from="1646761971783" duration="9740000" />
-      <workItem from="1646846344586" duration="3891000" />
+      <workItem from="1646846344586" duration="14928000" />
+      <workItem from="1646926167680" duration="21814000" />
+      <workItem from="1647023733225" duration="19432000" />
+      <workItem from="1647279283246" duration="15515000" />
+      <workItem from="1647363475957" duration="1035000" />
+      <workItem from="1647365258480" duration="2646000" />
+      <workItem from="1647372480932" duration="18001000" />
+      <workItem from="1647447387349" duration="54000" />
+      <workItem from="1647447522049" duration="1973000" />
     </task>
     <servers />
   </component>

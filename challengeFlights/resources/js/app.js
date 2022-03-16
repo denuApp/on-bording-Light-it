@@ -1,19 +1,29 @@
-// /**
-//  * First we will load all of this project's JavaScript dependencies which
-//  * includes Vue and other libraries. It is a great starting point when
-//  * building robust, powerful web applications using Vue and Laravel.
-//  */
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
-// import FlightComponent from "./components/FlightComponent.vue";
+
 
 require('./bootstrap');
 
 import { createApp } from 'vue'
-import FlightComponent from './components/FlightComponent'
+
+import FlightsTable from './components/FlightsTable'
+import FlightData from './components/FlightData'
+import FlightCreate from "./components/FlightCreate";
+import FlightEdit from "./components/FlightEdit";
+import popupWarning from "./components/popupWarning";
 
 createApp({
    components: {
-       FlightComponent,
+
+       FlightsTable,
+       FlightData,
+       FlightCreate,
+       FlightEdit,
+       popupWarning
    }
 
 }).mount('#app')
@@ -27,7 +37,7 @@ createApp({
 //  *
 //  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
 //  */
-
+//
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 //
@@ -44,16 +54,26 @@ createApp({
 //     el: '#app',
 // });
 
-new Vue({
-    el: '#app',
-
-    data: {
-        
-    },
-
-    methods: {
-
-    }
-
-
-})
+// new Vue({
+//     el: '#app',
+//
+//     data: {
+//
+//     },
+//
+//     methods: {
+//
+//     }
+//
+//
+// })
+// new Vue ({
+//
+//     el:'#app',
+//
+//     mounted() {
+//         axios.get('/flights-data').then(response => console.log(response.data))
+//     }
+//
+//
+// })

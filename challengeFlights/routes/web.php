@@ -34,7 +34,14 @@ Route::get('fetch-city', [CityController::class, 'fetch']);
 //Route::get('create-airline',[AirlineController::class, 'create']);
 
 Route::get('flights', [FlightController::class, 'index']);
+Route::get('fetch-flight', [FlightController::class, 'fetch']);
+Route::delete('delete-flight/{flight}', [FlightController::class, 'destroy']);
+Route::post('create-flight', [FlightController::class, 'store']);
+Route::get('edit-flight/{flight}', [CityController::class, 'edit']);
+
 
 Route::get('/', function () {
     return view('home');
 });
+
+
