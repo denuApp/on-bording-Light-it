@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Disponibility;
 use App\Models\Flight;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class FlightController extends Controller
 {
@@ -100,7 +99,6 @@ class FlightController extends Controller
      */
     public function update(Request $request, Flight $flight)
     {
-
         $attributes = request()->validate([
             'airline_id' => ['required'],
             'origin_id' => ['required'],
@@ -112,22 +110,19 @@ class FlightController extends Controller
         $originExists = Disponibility::where('city_id', $attributes['origin_id'])->where('airline_id', $attributes['airline_id'])->get();
         $destinationExists = Disponibility::where('city_id', $attributes['destination_id'])->where('airline_id', $attributes['airline_id'])->get();
 
-        if(empty($originExists) && empty($destinationExists))
-        {
-
+        if (empty($originExists) && empty($destinationExists)) {
             $flight->update($attributes);
 
             return response()->json([
                 'status' => 200,
                 'message' => 'Flight updated successfully!',
             ]);
-        }else{
+        } else {
             return response()->json([
                 'status' => 500,
                 'message' => 'can`t update flight',
             ]);
         }
-
     }
 
     /**
