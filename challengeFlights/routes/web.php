@@ -37,7 +37,7 @@ Route::get('flights', [FlightController::class, 'index']);
 Route::get('fetch-flight', [FlightController::class, 'fetch']);
 Route::delete('delete-flight/{flight}', [FlightController::class, 'destroy']);
 Route::post('create-flight', [FlightController::class, 'store']);
-Route::get('edit-flight/{flight}', [CityController::class, 'edit']);
+Route::patch('update-flight/{flight}', [FlightController::class, 'update']);
 
 Route::get('/', function () {
     return view('home');

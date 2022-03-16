@@ -201,6 +201,19 @@ export default {
 }
 </script>
 
-<style scoped src="vue-multiselect/dist/vue-multiselect.css">
+<style >
+    .multiselect{
+        background: transparent;
+    }
+    .multiselect__tags{
+        background: transparent !important;
+    }
 
+    .multiselect__single{
+        background: transparent !important;
+    }
+
+    .multiselect__input{
+        background: transparent !important;
+    }
 </style>

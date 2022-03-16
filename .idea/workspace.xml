@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightData.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/popupWarning.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/Airline.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/Airline.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/database/factories/DisponibilityFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/database/factories/DisponibilityFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/flights-table.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +110,7 @@
       <workItem from="1647365258480" duration="2646000" />
       <workItem from="1647372480932" duration="18001000" />
       <workItem from="1647447387349" duration="54000" />
-      <workItem from="1647447522049" duration="1973000" />
+      <workItem from="1647447522049" duration="15622000" />
     </task>
     <servers />
   </component>

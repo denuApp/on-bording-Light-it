@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Disponibility;
 use App\Models\Flight;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class FlightController extends Controller
 {
@@ -21,7 +23,7 @@ class FlightController extends Controller
 
     public function fetch()
     {
-        $flights = Flight::with(['airline', 'origin', 'destination'])->get();
+        $flights = Flight::with(['airline.cities', 'origin', 'destination'])->get();
 
         return response()->json([
             'flights' => $flights,
@@ -86,10 +88,7 @@ class FlightController extends Controller
      */
     public function edit(Flight $flight)
     {
-        return response()->json([
-            'status'=>200,
-            'flight'=>$flight::with(['airline', 'origin', 'destination']),
-        ]);
+        //
     }
 
     /**
@@ -101,7 +100,34 @@ class FlightController extends Controller
      */
     public function update(Request $request, Flight $flight)
     {
-        //
+
+        $attributes = request()->validate([
+            'airline_id' => ['required'],
+            'origin_id' => ['required'],
+            'destination_id' => ['required'],
+            'time_departure' => ['required'],
+            'time_arrival' =>  ['required'],
+        ]);
+
+        $originExists = Disponibility::where('city_id', $attributes['origin_id'])->where('airline_id', $attributes['airline_id'])->get();
+        $destinationExists = Disponibility::where('city_id', $attributes['destination_id'])->where('airline_id', $attributes['airline_id'])->get();
+
+        if(empty($originExists) && empty($destinationExists))
+        {
+
+            $flight->update($attributes);
+
+            return response()->json([
+                'status' => 200,
+                'message' => 'Flight updated successfully!',
+            ]);
+        }else{
+            return response()->json([
+                'status' => 500,
+                'message' => 'can`t update flight',
+            ]);
+        }
+
     }
 
     /**

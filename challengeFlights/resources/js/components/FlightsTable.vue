@@ -99,11 +99,24 @@
                     </tbody>
 
                 </table>
+
+
 <!--                <popup-warning ></popup-warning>-->
-                <flight-edit :flight="editFlight"  :airlines="airlines" v-if="editVisible" @closeEdit="editVisible = false"></flight-edit>
+                <flight-edit   :airlines="airlines" v-if="editVisible" @closeEdit="editVisible = false" @edited="editFlight" :flight="flight"></flight-edit>
             </div>
         </div>
     </div>
+        <VueMultiselect
+            v-model="selected"
+            :options="options"
+            :close-on-select="true"
+            :clear-on-select="false"
+            :allow-empty="false"
+            placeholder="Your airline name"
+            label="name"
+
+        >
+        </VueMultiselect>
     </div>
 </template>
 
@@ -112,12 +125,15 @@
     import PopupWarning from "./popupWarning";
     import FlightCreate from "./FlightCreate";
     import FlightEdit from "./FlightEdit";
+    import VueMultiselect from 'vue-multiselect'
     export default {
         name: 'FlightsTable',
-        components: {FlightEdit, FlightCreate, PopupWarning, FlightData},
+        components: {FlightEdit, FlightCreate, PopupWarning, FlightData, VueMultiselect},
         data() {
             return {
-                editFlight:{},
+                selected:'',
+                options: ['list', 'of', 'options'],
+                flight: {},
                 flights: [],
                 airlines: [],
                 createVisible: false,
@@ -145,23 +161,23 @@
                 this.createVisible =false;
                 console.log('funciona');
             },
+            editFlight(){
+
+                this.getFlights();
+                this.editVisible =false;
+                console.log('funciona');
+            },
             openCreate(){
                 this.createVisible = true;
             },
             openEdit(flight){
-                this.editVisible = true;
-                this.editFlight = flight;
+                 this.flight = flight;
 
-                axios
-                    .get('/edit-flight/' + flight.id)
-                    .then(res => {
-//
-                    })
+                this.editVisible = true;
             },
             getFlights(){
                 axios
                     .get('/fetch-flight')
-                    // .then(res => res.json())
                     .then(res => {
                         this.flights = res.data.flights;
                     });
@@ -179,7 +195,6 @@
 
     }
 </script>
-
-<style>
+<style  src="vue-multiselect/dist/vue-multiselect.css">
 
 </style>
