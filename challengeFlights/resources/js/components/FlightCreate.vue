@@ -105,9 +105,7 @@ export default {
 
     name: "FlightCreate",
 
-    // import Datepicker from 'vue3-date-time-picker';
-    // import 'vue3-date-time-picker/dist/main.css'
-    props: {
+     props: {
         airlines: {
             type: Array,
             default: []
@@ -136,10 +134,6 @@ export default {
             if(this.airline != null)
             {
                 this.cities = this.airline.cities;
-                // if(this.arrival != null)
-                // {
-                //     this.citiesOrigin.splice(this.arrival.id);
-                // }
                 return this.cities;
             } else return [];
 

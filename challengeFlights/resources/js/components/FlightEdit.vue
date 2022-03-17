@@ -2,7 +2,6 @@
 
     <div  v-show="editVisible" aria-hidden="true" id="editAirline" class="ml-14 text-right overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:inset-0">
         <div class="" >
-            <!-- Modal content -->
             <div class="relative bg-gray-300 rounded-lg ">
                 <div class="flex justify-end p-2">
                     <button @click="closeCreate" type="button"  class="close_button_add text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center d" data-modal-toggle="authentication-modal">
@@ -14,7 +13,6 @@
 
                     <h3 class="text-white text-xl text-align-left font-bold ml-2 uppercase">Edit Flight</h3>
 
-                    <p class="block mb-2 text-sm text-left flex text-white"> AIRLINE: </p>
                     <div class="mb-6 bg-gray-200 rounded-full shadow font-thin focus:outline-none focus:shadow-lg focus:shadow-slate-200 duration-100 shadow-gray-100">
                         <div class="lg:py-3 lg:px-5 flex " >
 
@@ -108,9 +106,6 @@ export default {
     },
 
     name: "FlightEdit",
-
-    // import Datepicker from 'vue3-date-time-picker';
-    // import 'vue3-date-time-picker/dist/main.css'
     props: {
         flight: {
             type: Object,

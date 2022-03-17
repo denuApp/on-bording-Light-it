@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
     |
     */
 
-//Route::get('/', [AirlineController::class, 'index']);
-
 Route::get('airlines', [AirlineController::class, 'index']);
 Route::post('create-airline', [AirlineController::class, 'store']);
 Route::delete('delete-airline/{airline}', [AirlineController::class, 'destroy']);

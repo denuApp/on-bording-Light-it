@@ -1,7 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 <script>
+
+
     $(document).ready(function() {
 
         fetchAirline();
+
+
 
         function fetchAirline() {
             fetch('http://challengeflights.test/fetch-airline')
@@ -38,6 +46,9 @@
                 })
         }
 
+        $(document).ready(function() {
+            $(".js-example-basic-multiple").select2();
+        });
 
         $(document).on('click', '.add_button', function (e) {
             e.preventDefault();
@@ -55,22 +66,23 @@
                 },
                 body: JSON.stringify({
                     name: $('#name_create').val(),
-                    description: $('#description_create').val()
-                })
-            })
-                .then(res => res.json())
-                .then(  function (response) {
-                    if(response.status == 200){
-                        alert(response.message);
-                        $("#createAirline").addClass('hidden');
-                        $("#createAirline").find('input').val("");
-                        fetchAirline();
-                    }
-                    else{
-                        $('#saveform_errList').html(response.message);
-                    }
+                    description: $('#description_create').val(),
+                    cities: $('#citiesSelection').val()
 
                 })
+            })
+            .then(res => res.json())
+            .then(  function (response) {
+                if(response.status == 200){
+                    alert(response.message);
+                    $("#createAirline").addClass('hidden');
+                    $("#createAirline").find('input').val();
+                    fetchAirline();
+                }
+                else{
+                    $('#saveform_errList').html(response.message);
+                }
+            })
 
         })
 

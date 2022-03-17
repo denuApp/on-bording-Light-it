@@ -22581,8 +22581,6 @@ __webpack_require__.r(__webpack_exports__);
     VueMultiselect: vue_multiselect__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   name: "FlightCreate",
-  // import Datepicker from 'vue3-date-time-picker';
-  // import 'vue3-date-time-picker/dist/main.css'
   props: {
     airlines: {
       type: Array,
@@ -22604,11 +22602,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     updateCities: function updateCities() {
       if (this.airline != null) {
-        this.cities = this.airline.cities; // if(this.arrival != null)
-        // {
-        //     this.citiesOrigin.splice(this.arrival.id);
-        // }
-
+        this.cities = this.airline.cities;
         return this.cities;
       } else return [];
     }
@@ -22723,8 +22717,6 @@ __webpack_require__.r(__webpack_exports__);
     VueMultiselect: vue_multiselect__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   name: "FlightEdit",
-  // import Datepicker from 'vue3-date-time-picker';
-  // import 'vue3-date-time-picker/dist/main.css'
   props: {
     flight: {
       type: Object,
@@ -22850,8 +22842,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      selected: '',
-      options: ['list', 'of', 'options'],
       flight: {},
       flights: [],
       airlines: [],
@@ -22864,9 +22854,6 @@ __webpack_require__.r(__webpack_exports__);
     this.getAirlines();
   },
   methods: {
-    //             onAdd() {
-    // //
-    //             },
     deleteFlight: function deleteFlight() {
       this.getFlights();
       console.log('funciona');
@@ -22898,8 +22885,7 @@ __webpack_require__.r(__webpack_exports__);
     getAirlines: function getAirlines() {
       var _this2 = this;
 
-      axios.get('/fetch-airline') // .then(res => res.json())
-      .then(function (res) {
+      axios.get('/fetch-airline').then(function (res) {
         _this2.airlines = res.data.airlines;
       });
     }
@@ -23168,7 +23154,7 @@ var _hoisted_10 = {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_popup_warning = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("popup-warning");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <tr class=\"hover:bg-gray-100 dark:hover:bg-gray-700\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.flight.id), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.flight.id), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.flight.airline.name), 1
   /* TEXT */
@@ -23180,13 +23166,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.flight.time_arrival), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <td class=\"py-4 px-6 text-sm font-medium text-right whitespace-nowrap\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"mt-8 md:mt-0 flex items-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div x-data=\"{show: false}\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <form method=\"POST\" action=\"/update-flight/{{flight.id}}\" class=\" ml-6\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        @csrf"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <button type=\"submit\" class=\"text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6\">EDIT</button>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </form>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div x-data=\"{ show: false }\" @click.away=\"show = false\" >"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('edit', $props.flight);
     }),
     type: "submit",
     "class": "text-gray-500 hover:text-blue-600 hover:underline mx-auto mr-6"
-  }, "EDIT"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <x-edit-flight :flight=\"flight.>")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "EDIT")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "text-gray-500 hover:text-red-600 hover:underline mx-auto",
     onClick: _cache[1] || (_cache[1] = function () {
       return $options.openDelete && $options.openDelete.apply($options, arguments);
@@ -23199,7 +23185,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onDeleteFlight: $options.onDelete
   }, null, 8
   /* PROPS */
-  , ["onDeleteFlight"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </tr>")], 64
+  , ["onDeleteFlight"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -23258,58 +23244,52 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "block mb-2 text-sm text-left flex text-white"
-}, " AIRLINE: ", -1
-/* HOISTED */
-);
-
-var _hoisted_10 = {
+var _hoisted_9 = {
   "class": "mb-6 bg-gray-200 rounded-full shadow font-thin focus:outline-none focus:shadow-lg focus:shadow-slate-200 duration-100 shadow-gray-100"
 };
-var _hoisted_11 = {
+var _hoisted_10 = {
   "class": "lg:py-3 lg:px-5 flex"
 };
-var _hoisted_12 = {
+var _hoisted_11 = {
   "class": "rounded-full flex items-center"
 };
-var _hoisted_13 = {
+var _hoisted_12 = {
   "class": "pr-2 relative bg-gray-200 mt-3 rounded-3xl py-3 px-4 w-1/2 shadow font-thin focus:outline-none focus:shadow-lg focus:shadow-slate-200 duration-100 shadow-gray-100"
 };
-var _hoisted_14 = {
+var _hoisted_13 = {
   "class": "mx-6 mt-3 -mr-1 relative bg-gray-200 rounded-3xl py-3 px-4 w-1/2 shadow font-thin focus:outline-none focus:shadow-lg focus:shadow-slate-200 duration-100 shadow-gray-100"
 };
-var _hoisted_15 = {
+var _hoisted_14 = {
   "date-rangepicker": "",
   "class": "flex items-center"
 };
-var _hoisted_16 = {
+var _hoisted_15 = {
   "class": "relative"
 };
-var _hoisted_17 = ["max"];
+var _hoisted_16 = ["max"];
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "mx-4 text-gray-500"
 }, "to", -1
 /* HOISTED */
 );
 
-var _hoisted_19 = {
+var _hoisted_18 = {
   "class": "relative"
 };
-var _hoisted_20 = ["min"];
-var _hoisted_21 = ["textContent"];
+var _hoisted_19 = ["min"];
+var _hoisted_20 = ["textContent"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_VueMultiselect = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("VueMultiselect");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Modal content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.closeCreate && $options.closeCreate.apply($options, arguments);
     }),
     type: "button",
     "class": "close_button_add text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center d",
     "data-modal-toggle": "authentication-modal"
-  }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
+  }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
     "background-color:": "",
     red: "",
     modelValue: $data.airline,
@@ -23325,7 +23305,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSelect: $options.emptyCity
   }, null, 8
   /* PROPS */
-  , ["modelValue", "options", "onSelect"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
+  , ["modelValue", "options", "onSelect"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
     modelValue: $data.origin,
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.origin = $event;
@@ -23340,7 +23320,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     label: "name"
   }, null, 8
   /* PROPS */
-  , ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
+  , ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
     modelValue: $data.destination,
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.destination = $event;
@@ -23354,7 +23334,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     label: "name"
   }, null, 8
   /* PROPS */
-  , ["modelValue", "options"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , ["modelValue", "options"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     name: "start",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
@@ -23366,7 +23346,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Departure date"
   }, null, 8
   /* PROPS */
-  , _hoisted_17), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.departureTime]])]), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_16), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.departureTime]])]), _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     name: "end",
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
@@ -23378,13 +23358,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Arrival date "
   }, null, 8
   /* PROPS */
-  , _hoisted_20), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.arrivalTime]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  , _hoisted_19), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.arrivalTime]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
     "class": "text-red-500 text-xs -mt-1 mb-6 mr-3",
     id: "saveform_errList",
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors)
   }, null, 8
   /* PROPS */
-  , _hoisted_21), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  , _hoisted_20), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
     onClick: _cache[6] || (_cache[6] = function () {
       return $options.onUpdate && $options.onUpdate.apply($options, arguments);
@@ -23500,8 +23480,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_flight_edit = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("flight-edit");
 
-  var _component_VueMultiselect = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("VueMultiselect");
-
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [_hoisted_7, _hoisted_8, _hoisted_9, _hoisted_10, _hoisted_11, _hoisted_12, _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
     onClick: _cache[0] || (_cache[0] = function () {
@@ -23517,17 +23495,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onCreated: $options.createFlight
   }, null, 8
   /* PROPS */
-  , ["airlines", "onCreated"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <flight-data v-for=\"flight in flights\">{{ flight }}</flight-data>"), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.flights, function (flight) {
+  , ["airlines", "onCreated"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.flights, function (flight) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_flight_data, {
       flight: flight,
       onDeleted: $options.deleteFlight,
       onEdit: $options.openEdit
     }, null, 8
     /* PROPS */
-    , ["flight", "onDeleted", "onEdit"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap \"> {{ flight.id }} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap \"> {{ flight.airline.name }} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4\">  {{flight.origin.name }} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4\">  {{flight.destination.name }} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4\">  {{flight.time_departure}} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-gray-900  text-sm mt-4 space-y-4\">  {{flight.time_arrival}} </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;    <td class=\"py-4 px-6 text-sm font-medium text-right whitespace-nowrap\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;        <div class=\"mt-8 md:mt-0 flex items-center\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;            <div x-data=\"{show: false}\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                <form method=\"POST\" action=\"/update-flight/{{flight.id}}\" class=\" ml-6\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                    &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                    <button type=\"submit\" class=\"text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6\">EDIT</button>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                </form>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;            </div>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;        </div>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;    </td>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-right whitespace-nowrap\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"mt-8 md:mt-0 flex items-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div x-data=\"{ show: false }\" @click.away=\"show = false\" >"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <button @click=\"show = true\" type=\"submit\" class=\"text-gray-500  hover:text-blue-600 hover:underline mx-auto mr-6\">EDIT</button>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;                    <x-edit-flight :flight=\"flight.>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    <td class=\"py-4 px-6 text-sm font-medium text-right whitespace-nowrap\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div class=\"mt-8 md:mt-0 flex items-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <form method=\"POST\" action=\"/delete-flight/{{flight.id}}\" class=\" ml-6\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                @method('DELETE')&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <button  class=\"text-gray-500 hover:text-red-600 hover:underline mx-auto\">DELETE</button>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </form>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("    </td>")]);
+    , ["flight", "onDeleted", "onEdit"])]);
   }), 256
   /* UNKEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <popup-warning ></popup-warning>"), $data.editVisible ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_flight_edit, {
+  ))])]), $data.editVisible ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_flight_edit, {
     key: 0,
     airlines: $data.airlines,
     onCloseEdit: _cache[2] || (_cache[2] = function ($event) {
@@ -23537,20 +23515,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     flight: $data.flight
   }, null, 8
   /* PROPS */
-  , ["airlines", "onEdited", "flight"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
-    modelValue: $data.selected,
-    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
-      return $data.selected = $event;
-    }),
-    options: $data.options,
-    "close-on-select": true,
-    "clear-on-select": false,
-    "allow-empty": false,
-    placeholder: "Your airline name",
-    label: "name"
-  }, null, 8
-  /* PROPS */
-  , ["modelValue", "options"])]);
+  , ["airlines", "onEdited", "flight"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]);
 }
 
 /***/ }),
@@ -23624,14 +23589,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     "class": "flex overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full",
     id: "popup-modal"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Modal content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Modal header "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.cancelDelete && $options.cancelDelete.apply($options, arguments);
     }),
     type: "button",
     "class": "text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white",
     "data-modal-toggle": "popup-modal"
-  }, _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Modal body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[1] || (_cache[1] = function () {
       return $options.confirmDelete && $options.confirmDelete.apply($options, arguments);
     }),
@@ -23666,6 +23631,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_FlightCreate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/FlightCreate */ "./resources/js/components/FlightCreate.vue");
 /* harmony import */ var _components_FlightEdit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FlightEdit */ "./resources/js/components/FlightEdit.vue");
 /* harmony import */ var _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/popupWarning */ "./resources/js/components/popupWarning.vue");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MultiselectCities'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -23679,62 +23645,17 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
     FlightsTable: _components_FlightsTable__WEBPACK_IMPORTED_MODULE_1__["default"],
     FlightData: _components_FlightData__WEBPACK_IMPORTED_MODULE_2__["default"],
     FlightCreate: _components_FlightCreate__WEBPACK_IMPORTED_MODULE_3__["default"],
     FlightEdit: _components_FlightEdit__WEBPACK_IMPORTED_MODULE_4__["default"],
-    popupWarning: _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__["default"]
+    popupWarning: _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__["default"],
+    MultiselectCities: Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MultiselectCities'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
   }
-}).mount('#app'); // window.Vue = require('vue').default;
-//
-// /**
-//  * The following block of code may be used to automatically register your
-//  * Vue components. It will recursively scan this directory for the Vue
-//  * components and automatically register them with their "basename".
-//  *
-//  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
-//  */
-//
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-//
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-// Vue.component('flights-component', require('./components/FlightComponent.vue').default);
-//
-// /**
-//  * Next, we will create a fresh Vue application instance and attach it to
-//  * the page. Then, you may begin adding components to this application
-//  * or customize the JavaScript scaffolding to fit your unique needs.
-//  */
-//
-// const app = new Vue({
-//     el: '#app',
-// });
-// new Vue({
-//     el: '#app',
-//
-//     data: {
-//
-//     },
-//
-//     methods: {
-//
-//     }
-//
-//
-// })
-// new Vue ({
-//
-//     el:'#app',
-//
-//     mounted() {
-//         axios.get('/flights-data').then(response => console.log(response.data))
-//     }
-//
-//
-// })
+}).mount('#app');
 
 /***/ }),
 

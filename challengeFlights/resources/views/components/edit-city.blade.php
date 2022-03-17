@@ -2,7 +2,7 @@
 
     <div  aria-hidden="true" id="editCity" class="hidden edit_modal overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
         <div class="relative px-4 w-full max-w-md h-full md:h-auto">
-            <!-- Modal content -->
+
             <div class="relative bg-gray-300 rounded-lg shadow ">
                 <div class="flex justify-end p-2">
                     <button type="button"  class="close_button_edit text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 " data-modal-toggle="authentication-modal">
@@ -21,9 +21,7 @@
                         <p text-black id="idEdit"></p>
 
                     </div>
-{{--                    @error('name')--}}
-{{--                    <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>--}}
-{{--                    @enderror--}}
+
                     <ul id="updateform_errList" > </ul>
 
                     <button type="submit"

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Airline;
+use App\Models\City;
+use App\Models\Disponibility;
 use Illuminate\Validation\Rule;
 
 class AirlineController extends Controller
@@ -14,7 +16,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        return view('admins.airlines', ['airlines' => Airline::latest()->paginate(10)]);
+        return view('admins.airlines', ['airlines' => Airline::latest()->paginate(10), 'cities'=>City::all()]);
     }
 
     /**
@@ -40,7 +42,20 @@ class AirlineController extends Controller
             'description' => ['required', 'max:225'],
         ]);
 
-        Airline::create($attributes);
+        $cities = request()->validate([
+            'cities' => ['required']
+        ]);
+
+        logger($cities);
+
+
+        $airline = Airline::create($attributes);
+
+        foreach ($cities as $city){
+            $airline->cities()->sync($city);
+
+        }
+
 
         return response()->json([
             'status' => 200,
