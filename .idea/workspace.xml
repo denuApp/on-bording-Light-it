@@ -6,31 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge4/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challenge4/resources/views/components/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/Disponibility.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Models/Flight.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Models/Flight.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightCreate.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightData.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightData.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightsTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/popupWarning.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/popupWarning.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/flights.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-jquery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-jquery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-airline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/create-city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-airline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-airline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/edit-city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +110,7 @@
       <workItem from="1647372480932" duration="18001000" />
       <workItem from="1647447387349" duration="54000" />
       <workItem from="1647447522049" duration="16046000" />
-      <workItem from="1647466211363" duration="17361000" />
+      <workItem from="1647466211363" duration="18038000" />
     </task>
     <servers />
   </component>
@@ -147,5 +127,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/challengeFlights/routes/web.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

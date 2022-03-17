@@ -23631,7 +23631,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_FlightCreate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/FlightCreate */ "./resources/js/components/FlightCreate.vue");
 /* harmony import */ var _components_FlightEdit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FlightEdit */ "./resources/js/components/FlightEdit.vue");
 /* harmony import */ var _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/popupWarning */ "./resources/js/components/popupWarning.vue");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MultiselectCities'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -23645,15 +23644,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   components: {
     FlightsTable: _components_FlightsTable__WEBPACK_IMPORTED_MODULE_1__["default"],
     FlightData: _components_FlightData__WEBPACK_IMPORTED_MODULE_2__["default"],
     FlightCreate: _components_FlightCreate__WEBPACK_IMPORTED_MODULE_3__["default"],
     FlightEdit: _components_FlightEdit__WEBPACK_IMPORTED_MODULE_4__["default"],
-    popupWarning: _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__["default"],
-    MultiselectCities: Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MultiselectCities'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    popupWarning: _components_popupWarning__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
 }).mount('#app');
 

@@ -15,7 +15,6 @@ import FlightData from './components/FlightData'
 import FlightCreate from "./components/FlightCreate";
 import FlightEdit from "./components/FlightEdit";
 import popupWarning from "./components/popupWarning";
-import MultiselectCities from "./components/MultiselectCities";
 
 createApp({
    components: {
@@ -25,7 +24,6 @@ createApp({
        FlightCreate,
        FlightEdit,
        popupWarning,
-       MultiselectCities
    }
 
 }).mount('#app')
