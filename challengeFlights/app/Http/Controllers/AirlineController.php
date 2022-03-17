@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Airline;
 use App\Models\City;
-use App\Models\Disponibility;
 use Illuminate\Validation\Rule;
 
 class AirlineController extends Controller
@@ -43,19 +42,16 @@ class AirlineController extends Controller
         ]);
 
         $cities = request()->validate([
-            'cities' => ['required']
+            'cities' => ['required'],
         ]);
 
         logger($cities);
 
-
         $airline = Airline::create($attributes);
 
-        foreach ($cities as $city){
+        foreach ($cities as $city) {
             $airline->cities()->sync($city);
-
         }
-
 
         return response()->json([
             'status' => 200,
