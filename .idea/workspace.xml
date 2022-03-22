@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,7 @@
       <workItem from="1647372480932" duration="18001000" />
       <workItem from="1647447387349" duration="54000" />
       <workItem from="1647447522049" duration="16046000" />
-      <workItem from="1647466211363" duration="18038000" />
+      <workItem from="1647466211363" duration="19456000" />
     </task>
     <servers />
   </component>
