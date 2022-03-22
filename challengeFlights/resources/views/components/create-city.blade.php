@@ -1,7 +1,7 @@
 
     <div  aria-hidden="true" id="createCity" class="create_city hidden overflow-y-auto flex overflow-x-hidden fixed justify-center items-center h-modal md:h-full md:inset-0">
         <div class="relative px-4 w-full max-w-md h-full md:h-auto">
-            <!-- Modal content -->
+
             <div class="relative bg-gray-300 rounded-lg shadow ">
 
                 <div class="flex justify-end p-2">
@@ -19,9 +19,6 @@
                         </div>
 
                     </div>
-{{--                    @error('name')--}}
-{{--                    <p class="text-red-500 text-xs -mt-1 mb-6 px-5">{{ $message }}</p>--}}
-{{--                    @enderror--}}
                     <ul id="saveform_errList" > </ul>
 
 

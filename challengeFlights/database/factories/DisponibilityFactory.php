@@ -22,8 +22,8 @@ class DisponibilityFactory extends Factory
 
         return [
 
-            'id_city' => City::get()->random()->id,
-            'id_airline' => Airline::get()->random()->id,
+            'city_id' => City::get()->random()->id,
+            'airline_id' => Airline::get()->random()->id,
         ];
     }
 }

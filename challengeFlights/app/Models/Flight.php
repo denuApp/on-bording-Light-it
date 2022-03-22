@@ -11,20 +11,6 @@ class Flight extends Model
 
     protected $guarded = [];
 
-//    public function scopeOriginCount ($query, $search)
-//    {
-//        $query
-//            ->count()
-//            ->where('id_origin', $search);
-//    }
-//
-//    public function scopeDestinationCount ($query, $search)
-//    {
-//        $query
-//            ->count()
-//            ->where('id_destination', $search);
-//    }
-
     public function airline()
     {
         return $this->belongsTo(Airline::class);

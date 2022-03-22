@@ -117,7 +117,6 @@
 
         $(document).on('click','.update_city', function(e){
 
-             //$city_id = $(this).val();
             $data = {
                 name : $('#name').val(),
                 id : $('#idEdit').val()
