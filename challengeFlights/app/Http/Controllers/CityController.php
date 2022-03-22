@@ -49,7 +49,7 @@ class CityController extends Controller
 
     public function fetch()
     {
-        $cities = City::withCount(['origin', 'destination'])->paginate(10)->get();
+        $cities = City::withCount(['origin', 'destination'])->get();
         //$cities = City::all()->loadCount(['origin','destination']);
 
         return response()->json([
