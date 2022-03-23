@@ -61,7 +61,9 @@ class AirlineController extends Controller
 
     public function fetch()
     {
-        $airlines = Airline::with('cities')->withCount(['flights'])->get();
+        $airlines = Airline::with('cities')->withCount('flights')->paginate(10);
+
+        $toShow = ['id', 'name', 'description', 'flights_count'];
 
         return response()->json([
             'airlines' => $airlines,

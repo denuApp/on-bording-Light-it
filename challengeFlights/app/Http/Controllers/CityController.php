@@ -54,7 +54,7 @@ class CityController extends Controller
 
         return response()->json([
             'cities' => $cities,
-        ])->paginate(10);
+        ]);
     }
 
     /**
