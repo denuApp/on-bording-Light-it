@@ -63,10 +63,10 @@ class AirlineController extends Controller
     {
         $airlines = Airline::with('cities')->withCount('flights')->paginate(10);
 
-        $toShow = array("id", "name", "description", "flights_count");
+        $toShow = ['id', 'name', 'description', 'flights_count'];
 
         return response()->json([
-            'airlines' => $airlines
+            'airlines' => $airlines,
         ]);
     }
 
