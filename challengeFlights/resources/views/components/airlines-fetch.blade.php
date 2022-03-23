@@ -10,7 +10,7 @@
     $(document).ready(function() {
 
         fetchAirline();
-        // $('tbody').on('click', '.pagination ', function (e) {
+        // $('tbody').on('click', 'a .next ', function (e) {
         //     e.preventDefault();
         //     console.log('cambia');
         //     $('#load').append('<img style="position: absolute; left: 0; top: 0; z-index: 10000;" src="https://i.imgur.com/v3KWF05.gif />');
@@ -24,10 +24,8 @@
             fetch('http://challengeflights.test/fetch-airline')
                 .then(res => res.json())
                 .then(function (data) {
-                    console.log(data)
                     $('tbody').html("");
-                    $.each(data.airlines.data, function (key, item) {
-
+                    $.each(data.airlines, function (key, item) {
                         $('tbody').append(
                             '<tr class="hover:bg-gray-100">\
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">' + item.id + '</td>\

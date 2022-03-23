@@ -12,6 +12,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
+
 <body style="font-family: Open Sans, sans-serif">
 <section class="px-6 py-8">
 
@@ -54,7 +55,6 @@
 
         <div class="mt-10">
             <div class="relative inline-block mx-auto lg:bg-gray-200 rounded-full">
-
                 <form method="POST" action="#" class="lg:flex text-sm">
                     <div class="lg:py-3 lg:px-5 flex items-center">
                         <label for="email" class="hidden lg:inline-block">
