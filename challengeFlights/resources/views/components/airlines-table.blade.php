@@ -5,7 +5,7 @@
 <div class="flex flex-col mt-10">
     <p class="text-xs text-right text-gray-400 mb-3">* By deleting an airline the asociated flights would be deleted</p>
 
-    <div class="overflow-x-auto shadow-md sm:rounded-lg">
+    <div id="load" class="overflow-x-auto shadow-md sm:rounded-lg">
 
         <div class="inline-block min-w-full align-middle">
 
@@ -45,7 +45,6 @@
                     <tbody class="bg-white divide-y divide-gray-200 ">
 
                             <x-edit-airline />
-
 
                     </tbody>
                 </table>

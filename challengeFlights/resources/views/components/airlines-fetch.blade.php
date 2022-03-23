@@ -10,15 +10,24 @@
     $(document).ready(function() {
 
         fetchAirline();
-
+        // $('tbody').on('click', '.pagination ', function (e) {
+        //     e.preventDefault();
+        //     console.log('cambia');
+        //     $('#load').append('<img style="position: absolute; left: 0; top: 0; z-index: 10000;" src="https://i.imgur.com/v3KWF05.gif />');
+        //     // var url = $(this).attr('href');
+        //     window.history.pushState("", "", url);
+        //     fetchAirline();
+        // });
 
 
         function fetchAirline() {
             fetch('http://challengeflights.test/fetch-airline')
                 .then(res => res.json())
                 .then(function (data) {
+                    console.log(data)
                     $('tbody').html("");
-                    $.each(data.airlines, function (key, item) {
+                    $.each(data.airlines.data, function (key, item) {
+
                         $('tbody').append(
                             '<tr class="hover:bg-gray-100">\
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap ">' + item.id + '</td>\
@@ -47,6 +56,16 @@
                     });
                 })
         }
+
+
+        // $('document').on('click', '.pagination a', function (e) {
+        //     console.log('cambia')
+        //     e.preventDefault();
+        //     $('#load').append('<img style="position: absolute; left: 0; top: 0; z-index: 10000;" src="https://i.imgur.com/v3KWF05.gif" />');
+        //     var url = $(this).attr('href');
+        //     window.history.pushState("", "", url);
+        //     fetchAirline(url);
+        // });
 
         $(document).ready(function() {
             $(".js-example-basic-multiple").select2();
@@ -80,6 +99,7 @@
                     $("#createAirline").addClass('hidden');
                     $("#createAirline").find('input').val();
                     fetchAirline();
+                    addRow();
                 }
                 else{
                     $('#saveform_errList').html(response.message);
