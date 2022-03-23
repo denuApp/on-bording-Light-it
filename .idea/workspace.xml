@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/AirlineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/CityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-fetch.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/airlines-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/cities-table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challengeFlights/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +77,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -84,6 +93,22 @@
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/components" />
       <recent name="$PROJECT_DIR$/challengeFlights/resources/views/admins" />
     </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.tests">
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/challengeFlights/tests" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vendor" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/challengeFlights/vendor" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.vendor" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,7 +131,8 @@
       <workItem from="1647372480932" duration="18001000" />
       <workItem from="1647447387349" duration="54000" />
       <workItem from="1647447522049" duration="16046000" />
-      <workItem from="1647466211363" duration="20616000" />
+      <workItem from="1647466211363" duration="26375000" />
+      <workItem from="1647977950536" duration="6464000" />
     </task>
     <servers />
   </component>
@@ -124,15 +150,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/challengeFlights/routes/web.php</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
