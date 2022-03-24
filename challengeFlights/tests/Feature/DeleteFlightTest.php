@@ -10,8 +10,7 @@ use Tests\TestCase;
 
 class DeleteFlightTest extends TestCase
 {
-
-    public function test_delete_flight_correctly ()
+    public function test_delete_flight_correctly()
     {
         $this->withoutExceptionHandling();
 
@@ -23,19 +22,18 @@ class DeleteFlightTest extends TestCase
             ->create([
                 'airline_id' => $airline['id'],
                 'origin_id' => $origin['id'],
-                'destination_id' => $destination['id']
+                'destination_id' => $destination['id'],
             ]);
 
         $this
             ->delete(action([FlightController::class, 'destroy'], $flight->id));
 
         $this
-            ->assertDatabaseMissing(Flight::class , [
+            ->assertDatabaseMissing(Flight::class, [
                 'id' => $flight['id'],
                 'airline_id' => $flight['airline_id'],
                 'origin_id' => $flight['origin_id'],
-                'destination_id' => $flight['destination_id']
+                'destination_id' => $flight['destination_id'],
             ]);
-
     }
 }

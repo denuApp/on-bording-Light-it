@@ -5,14 +5,12 @@ namespace Tests\Feature;
 use App\Models\Airline;
 use App\Models\City;
 use App\Models\Flight;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class FetchFlightsTest extends TestCase
 {
-
-    public function test_shows_table(){
-
+    public function test_shows_table()
+    {
         $this->withoutExceptionHandling();
 
         $airline = Airline::factory()->create();
@@ -25,10 +23,8 @@ class FetchFlightsTest extends TestCase
             ->create([
                 'airline_id' => $airline['id'],
                 'origin_id' => $origin['id'],
-                'destination_id' => $destination['id']
+                'destination_id' => $destination['id'],
             ]);
-
-
 
         $this
             ->get('fetch-flight')

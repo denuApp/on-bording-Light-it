@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Disponibility;
 use App\Models\Flight;
 use Illuminate\Http\Request;
 
@@ -113,7 +112,6 @@ class FlightController extends Controller
             'status' => 200,
             'message' => 'Flight updated successfully!',
         ]);
-
     }
 
     /**

@@ -10,9 +10,8 @@ use Tests\TestCase;
 
 class EditFlightTest extends TestCase
 {
-    public function test_flight_updated_correctly ()
+    public function test_flight_updated_correctly()
     {
-
         $this->withoutExceptionHandling();
 
         $airline1 = Airline::factory()->create();
@@ -25,9 +24,8 @@ class EditFlightTest extends TestCase
             ->create([
                 'airline_id' => $airline1['id'],
                 'origin_id' => $origin['id'],
-                'destination_id' => $destination['id']
+                'destination_id' => $destination['id'],
             ]);
-
 
         $this
             ->patch(action([FlightController::class, 'update'], $flight->id), [
@@ -35,18 +33,16 @@ class EditFlightTest extends TestCase
                 'origin_id' => $flight['origin_id'],
                 'destination_id' => $flight['origin_id'],
                 'time_departure' => $newTime,
-                'time_arrival' => $newTime
+                'time_arrival' => $newTime,
             ])
             ->assertSuccessful();
 
         $this
-            ->assertDatabaseHas(Flight::class , [
-                'airline_id' => $airline2['id']
+            ->assertDatabaseHas(Flight::class, [
+                'airline_id' => $airline2['id'],
             ])
             ->assertDatabaseMissing(Flight::class, [
-                'airline_id' => $airline1['id']
+                'airline_id' => $airline1['id'],
             ]);
-
     }
-
 }
