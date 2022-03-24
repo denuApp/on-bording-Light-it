@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/challengeFlights/tests/Feature/CreateFlightTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/tests/Feature/DeleteFlightTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/tests/Feature/EditFlightTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challengeFlights/tests/Feature/FetchFlightsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/app/Http/Controllers/FlightController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/js/components/FlightEdit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/airlines.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/resources/views/admins/cities.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challengeFlights/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/challengeFlights/tests/TestCase.php" afterDir="false" />
-    </list>
+    <list default="true" id="faab1390-221d-4098-be59-00362f70c904" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
