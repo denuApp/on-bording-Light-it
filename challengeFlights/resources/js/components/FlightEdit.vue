@@ -26,7 +26,9 @@
                                 :allow-empty="false"
                                 placeholder="Your airline name"
                                 label="name"
+                                @input = "updateCities"
                                 @select = "emptyCity"
+
 
                             >
                             </VueMultiselect>
@@ -146,16 +148,10 @@ export default {
 
     computed: {
 
-        updateCities: function(){
+        updateCities (){
             if(this.airline != null)
             {
                 this.cities = this.airline.cities;
-                // if(this.arrival != null)
-                // {
-                //     this.citiesOrigin.splice(this.arrival.id);
-                // }
-                // this.origin=null;
-
                 return this.cities;
             } else return [];
 

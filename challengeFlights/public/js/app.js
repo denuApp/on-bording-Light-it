@@ -22751,12 +22751,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     updateCities: function updateCities() {
       if (this.airline != null) {
-        this.cities = this.airline.cities; // if(this.arrival != null)
-        // {
-        //     this.citiesOrigin.splice(this.arrival.id);
-        // }
-        // this.origin=null;
-
+        this.cities = this.airline.cities;
         return this.cities;
       } else return [];
     }
@@ -23302,10 +23297,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "allow-empty": false,
     placeholder: "Your airline name",
     label: "name",
+    onInput: $options.updateCities,
     onSelect: $options.emptyCity
   }, null, 8
   /* PROPS */
-  , ["modelValue", "options", "onSelect"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
+  , ["modelValue", "options", "onInput", "onSelect"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
     modelValue: $data.origin,
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.origin = $event;
