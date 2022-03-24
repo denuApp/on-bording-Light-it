@@ -107,22 +107,13 @@ class FlightController extends Controller
             'time_arrival' =>  ['required'],
         ]);
 
-        $originExists = Disponibility::where('city_id', $attributes['origin_id'])->where('airline_id', $attributes['airline_id'])->get();
-        $destinationExists = Disponibility::where('city_id', $attributes['destination_id'])->where('airline_id', $attributes['airline_id'])->get();
+        $flight->update($attributes);
 
-        if (empty($originExists) && empty($destinationExists)) {
-            $flight->update($attributes);
+        return response()->json([
+            'status' => 200,
+            'message' => 'Flight updated successfully!',
+        ]);
 
-            return response()->json([
-                'status' => 200,
-                'message' => 'Flight updated successfully!',
-            ]);
-        } else {
-            return response()->json([
-                'status' => 500,
-                'message' => 'can`t update flight',
-            ]);
-        }
     }
 
     /**
