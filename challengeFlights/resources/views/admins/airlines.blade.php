@@ -1,6 +1,5 @@
 <x-layout>
 
-
         <x-airlines-table :airlines="$airlines" :cities="$cities"/>
 
 

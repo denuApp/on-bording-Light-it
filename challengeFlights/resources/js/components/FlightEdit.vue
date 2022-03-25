@@ -17,8 +17,6 @@
                         <div class="lg:py-3 lg:px-5 flex " >
 
                             <VueMultiselect
-
-                                background-color: red
                                 v-model="airline"
                                 :options="airlines"
                                 :close-on-select="true"
@@ -42,7 +40,6 @@
                             <VueMultiselect
                                 v-model="origin"
                                 :options="cities"
-                                class="bg-transparent"
                                 :close-on-select="true"
                                 :clear-on-select="false"
                                 :allow-empty="false"

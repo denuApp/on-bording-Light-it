@@ -26,6 +26,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "vue-multiselect": "^3.0.0-alpha.2"
+        "vue-multiselect": "^3.0.0-alpha.2",
+        "vuejs-smart-table": "^0.0.8"
     }
 }

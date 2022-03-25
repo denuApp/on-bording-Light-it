@@ -11,7 +11,7 @@ class Flight extends Model
 
     protected $guarded = [];
 
-    public function airline()
+        public function airline()
     {
         return $this->belongsTo(Airline::class);
     }

@@ -2,7 +2,9 @@
 
 <x-layout>
 
+
     <div id="app">
+
         <flights-table></flights-table>
 
     </div>

@@ -23285,8 +23285,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "close_button_add text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center d",
     "data-modal-toggle": "authentication-modal"
   }, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueMultiselect, {
-    "background-color:": "",
-    red: "",
     modelValue: $data.airline,
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.airline = $event;
@@ -23307,7 +23305,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.origin = $event;
     }),
     options: $data.cities,
-    "class": "bg-transparent",
     "close-on-select": true,
     "clear-on-select": false,
     "allow-empty": false,
